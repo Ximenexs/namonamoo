@@ -1,0 +1,278 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 120px;
+    scroll-behavior: smooth; /* Rolagem suave */
+  }
+  
+  /* Gradiente Animado */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff00ff, #00f5d4, #9457eb);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: -2; /* Atrás do vídeo */
+    opacity: 0.3; /* Opacidade baixa */
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Vídeo de Fundo */
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    overflow: hidden;
+  }
+  
+  .video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Cobre toda a área */
+    opacity: 0.3; /* Opacidade baixa */
+  }
+  
+  /* Fundo de Partículas */
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Atrás do conteúdo */
+  }
+  
+  /* Container Principal */
+  .container {
+    background-color: rgba(26, 26, 26, 0.8); /* Fundo escuro com opacidade */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    position: relative; /* Garante que o conteúdo fique acima do fundo */
+    z-index: 1; /* Coloca o conteúdo na frente do fundo */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #00f5d4; /* Turquesa neon */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00f5d4, 0 0 20px #00f5d4; /* Efeito neon */
+  }
+  
+  /* Galeria de Fotos */
+  .gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .gallery img {
+    width: 200px; /* Largura fixa para o quadrado */
+    height: 200px; /* Altura fixa para o quadrado */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* Rosa neon */
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Corta a imagem para preencher o espaço */
+    object-position: center; /* Centraliza o corte */
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Mensagens */
+  .messages {
+    background-color: rgba(42, 42, 42, 0.9); /* Fundo escuro com opacidade */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #9457eb, 0 0 20px #9457eb; /* Roxo neon */
+    margin: 20px 0;
+    font-family: 'Pacifico', cursive; /* Fonte bonita */
+    font-size: 1.4rem; /* Tamanho maior */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    color: #fff;
+  }
+  
+  .messages p {
+    margin: 10px 0;
+    text-shadow: 0 0 5px #00f5d4, 0 0 10px #00f5d4; /* Efeito neon no texto */
+  }
+  
+  /* Botão de Surpresa */
+  #surpresaBtn {
+    background-color: #ff00ff; /* Rosa neon */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  #surpresaBtn:hover {
+    background-color: #d6336c;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* Efeito neon */
+  }
+  
+  #surpresaText {
+    font-size: 1.5rem;
+    color: #00f5d4; /* Turquesa neon */
+    margin-top: 20px;
+    display: none; /* Inicialmente escondido */
+    text-shadow: 0 0 10px #00f5d4, 0 0 20px #00f5d4; /* Efeito neon */
+  }
+  
+  /* Player de Música */
+  .music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(42, 42, 42, 0.9); /* Fundo escuro com opacidade */
+    padding: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Garante que o player fique acima de tudo */
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Para garantir que fique responsivo */
+  }
+  
+  #playPauseBtn {
+    background-color: #9457eb; /* Roxo neon */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  #playPauseBtn:hover {
+    background-color: #7c4dbf;
+    box-shadow: 0 0 10px #9457eb, 0 0 20px #9457eb; /* Efeito neon */
+  }
+  
+  /* Barra de Progresso */
+  .progress-bar {
+    flex-grow: 1;
+    max-width: 300px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #444;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #00f5d4; /* Turquesa neon */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px #00f5d4, 0 0 10px #00f5d4; /* Efeito neon */
+  }
+  
+  .progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #00f5d4; /* Turquesa neon */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px #00f5d4, 0 0 10px #00f5d4; /* Efeito neon */
+  }
+  
+  /* Volume */
+  .volume-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .volume-bar {
+    width: 80px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #444;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ff00ff; /* Rosa neon */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; /* Efeito neon */
+  }
+  
+  .volume-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #ff00ff; /* Rosa neon */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; /* Efeito neon */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .gallery img {
+      width: 80%;
+      margin-bottom: 15px;
+    }
+  
+    .controls {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    #progressBar {
+      width: 100%;
+    }
+  
+    .messages {
+      font-size: 1.2rem; /* Ajuste para telas menores */
+    }
+  }

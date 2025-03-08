@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Minha Namorada ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Vídeo de Fundo -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="video.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
+  </div>
+
+  <!-- Fundo de Partículas -->
+  <div id="particles-js"></div>
+
+  <div class="container">
+    <h1 class="animate__animated animate__heartBeat">Feliz Dia das Mulheres, Meu Amor! ❤️</h1>
+    
+    <!-- Galeria de Fotos -->
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Nossa foto 1" class="animate__animated animate__fadeInLeft">
+      <img src="foto2.jpg" alt="Nossa foto 2" class="animate__animated animate__fadeInUp">
+      <img src="foto3.jpg" alt="Nossa foto 3" class="animate__animated animate__fadeInRight">
+    </div>
+
+    <!-- Mensagens -->
+    <div class="messages">
+        <p>Oi minha princesa,</p>
+        <p>Hoje é um dia especial para celebrar a guerreira alfa, namorada, mulher incrível que você é.</p>
+        <p>Você é a pessoa mais importante da minha vida, futura mãe dos meus fio, e eu sou muito grato por ter você ao meu lado.</p>
+        <p>Te amo mais do que tudo! ❤️</p>
+    </div>
+
+    <!-- Botão de Surpresa -->
+    <button id="surpresaBtn">Clique aqui para uma surpresa!</button>
+    <p id="surpresaText" class="hidden animate__animated animate__bounceIn">Você é a melhor coisa que já aconteceu na minha vida! 💖</p>
+  </div>
+
+  <!-- Player de Música -->
+  <div class="music-player">
+    <audio id="audio">
+      <source src="musica.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <div class="controls">
+      <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progressBar" value="0" class="progress-bar">
+      <span id="duration">0:00</span>
+      <div class="volume-container">
+        <i class="fas fa-volume-up"></i>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" class="volume-bar">
+      </div>
+    </div>
+  </div>
+
+  <!-- Áudio de Fundo -->
+  <audio id="backgroundAudio" loop>
+    <source src="ambiente.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
